@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Case Study- Google Lens VS Mobilenet</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    </head>
+    <body style="text-align: center;">
+        <h1 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 53px;">CASE STUDY</h1>
+        <h1 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 30px; font-weight: 350">- Google Lens VS Mobilenet -</h2>
+        <br>
+        <hr>
+        <br>
+        <div id="div_bottle" class="container" style="background-color: rgb(255, 201, 228); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">1.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 420px; height: 530px; border-radius: 25px;" src="Water_Bottle.webp">
+            <br><br>
+            <label id="label_google_lens_output_bottle">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_bottle">Hydro Flask Wide Mouth, <br>Hydro Flask Standard Mouth.</p>
+            <label id="label_mobilenet_output_bottle">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_bottle"></p>
+            <label id="bottle_result">Result:</label>
+            <p id="answer_bottle_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_bed" class="container" style="background-color: rgb(186, 203, 255); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">2.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 420px; height: 530px; border-radius: 25px;" src="Bed.jpg">
+            <br><br>
+            <label id="label_google_lens_output_bed">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_bed">Classic 100% Cotton Single Bedsheet Set- Lt Green, <br>Checked Single Bed sheet with Pillow Cover.</p>
+            <label id="label_mobilenet_output_bed">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_bed"></p>
+            <label id="bed_result">Result:</label>
+            <p id="answer_bed_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_hanger" class="container" style="background-color: rgb(255, 214, 186); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">3.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 420px; height: 530px; border-radius: 25px;" src="Hanger.avif">
+            <br><br>
+            <label id="label_google_lens_output_hanger">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_hanger">Metal Hangers.</p>
+            <label id="label_mobilenet_output_hanger">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_hanger"></p>
+            <label id="hanger_result">Result:</label>
+            <p id="answer_hanger_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_mobile_phone" class="container" style="background-color: rgb(186, 210, 255); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">4.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 420px; height: 530px; border-radius: 25px;" src="Mobile_Phone_Samsung_Galaxy_A53.jpg">
+            <br><br>
+            <label id="label_google_lens_output_mobile_phone">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_mobile_phone">Samsung Galaxy A53 5G Enterprise Edition.</p>
+            <label id="label_mobilenet_output_mobile_phone">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_mobile_phone"></p>
+            <label id="mobile_phone_result">Result:</label>
+            <p id="answer_mobile_phone_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_shirt" class="container" style="background-color: rgb(255, 209, 186); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">5.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 420px; height: 530px; border-radius: 25px;" src="Shirt.avif">
+            <br><br>
+            <label id="label_google_lens_output_shirt">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_shirt">Men Relaxed Fit Shirt with Short Sleeves.</p>
+            <label id="label_mobilenet_output_shirt">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_shirt"></p>
+            <label id="shirt_result">Result:</label>
+            <p id="answer_shirt_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_humidifier" class="container" style="background-color: rgb(255, 186, 216); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">6.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 370px; height: 530px; border-radius: 25px;" src="Humidifier_Fan.jpg">
+            <br><br>
+            <label id="label_google_lens_output_humidifier">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_humidifer">Mini Portable Rechargeable Evaporative Air Cooler.</p>
+            <label id="label_mobilenet_output_humidifier">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_humidifier"></p>
+            <label id="humidifier_result">Result:</label>
+            <p id="answer_humidifier_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_tteokbokki" class="container" style="background-color: rgb(255, 201, 150); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">7.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 420px; height: 530px; border-radius: 25px;" src="Tteokbokki.jpg">
+            <br><br>
+            <label id="label_google_lens_output_tteokbokki">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_tteokbokki">Tteok-bokki.</p>
+            <label id="label_mobilenet_output_tteokbokki">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_tteokbokki"></p>
+            <label id="tteokbokki_result">Result:</label>
+            <p id="answer_tteokbokki_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_hoodie" class="container" style="background-color: rgb(250, 228, 206); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">8.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 370px; height: 530px; border-radius: 25px;" src="Plain_Pullover_Hoodie.jpg">
+            <br><br>
+            <label id="label_google_lens_output_hoodie">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_hoodie">Plain White Hoodie.</p>
+            <label id="label_mobilenet_output_hoodie">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_hoodie"></p>
+            <label id="hoodie_result">Result:</label>
+            <p id="answer_hoodie_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_umbrella" class="container" style="background-color: rgb(223, 223, 223); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">9.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 420px; height: 630px; border-radius: 25px;" src="Black_Umbrella.jpg">
+            <br><br>
+            <label id="label_google_lens_output_umbrella">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_umbrella">Windproof Travel Umbrella.</p>
+            <label id="label_mobilenet_output_umbrella">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_umbrella"></p>
+            <label id="umbrella_result">Result:</label>
+            <p id="answer_umbrella_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="div_sneakers" class="container" style="background-color: rgb(191, 217, 255); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 45%; margin: auto; padding: 10px;">
+            <div style="clear: both">
+                <h3 style="float: left;" class="container_left_element">10.</h3>
+                <h3 style="display: inline-block;">Sample Image:</h3>
+            </div><br>
+            <img style="width: 420px; height: 530px; border-radius: 25px;" src="Sneakers.webp">
+            <br><br>
+            <label id="label_google_lens_output_sneakers">Output on Google Lens:</label>
+            <p id="answer_google_lens_output_for_sneakers">Colourblock Lace-Up Sneakers For Women.</p>
+            <label id="label_mobilenet_output_sneakers">Output on Mobilenet:</label>
+            <p id="answer_mobilenet_model_output_for_sneakers"></p>
+            <label id="sneakers_result">Result:</label>
+            <p id="answer_sneakers_result"></p>
+            <br>
+        </div>
+        <br><br><br>
+        <div id="Ultimate_results" style="background-color: rgb(255, 177, 177); border-radius: 25px; text-align: center; font-size: 20px; font-family: 'Raleway', sans-serif; box-shadow: 11px 11px 10px rgb(104, 104, 104); width: 50%; margin: auto; padding: 10px;">
+            <p>I have tested 10 images.</p>
+            <p>GOOGLE LENS has predicted __ of them accurately.</p>
+            <p>MOBILENET has predicted __ of them accurately.</p>
+            <p>Hence, ____ was more accurate.</p>
+        </div>
+        <br><br>
+        <br><br>
+        <footer>
+            <h3 style="background-color: rgba(185, 185, 185, 0.766); font-size: 20px; font-family: 'Raleway', sans-serif; position: fixed; bottom: 0; right: 0; left: 0;">Developed by- Hiya Singh Panwar</h3>
+        </footer>
+    </body>
+</html>
